@@ -1,0 +1,31 @@
+package com.simplilearn.demo;
+import java.util.Scanner;
+public class artOperations {
+	public static void main(String[] args) {
+		int num1,num2, ch;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter num1: ");
+		num1=sc.nextInt();
+		System.out.println("Enter num2:");
+		num2=sc.nextInt();
+		System.out.println("Enter choice :");
+		ch=sc.nextInt();
+		if(ch==1){
+			System.out.println("Sum =" +(num1+num2));
+		}
+		else if(ch==2){
+			System.out.println("sub =" +(num1-num2));
+		}
+		else if(ch==3){
+			System.out.println("mul =" +(num1*num2));
+		}
+		else if(ch==4){
+			System.out.println("div=" +(num1/num2));
+			
+		}
+		else {
+			System.out.println("enter choice between 1 to 4");
+		}
+}
+}
+
