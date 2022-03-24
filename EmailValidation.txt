@@ -1,0 +1,31 @@
+package com.simplilearn.demo;
+import java.util.Scanner;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+import java.util.ArrayList;
+
+public class EmailValidation {
+	public static void main(String[] args) {
+		ArrayList<String>  emailID=new ArrayList<String>();
+		emailID.add("abc27@gmail.com");
+		emailID.add("Def@gmail.com");
+		emailID.add("Wipro@gmail.com");
+		emailID.add("simplilearn5@gmail.com");
+		emailID.add("Training@gmail.com");
+		emailID.add("Phase1@gmail.com");
+		
+		String seaEle;
+		System.out.println("Enter mail to search: ");
+		Scanner scanner=new Scanner(System.in);
+		seaEle=scanner.nextLine();
+		String regex="^(.+)@(.+)$";
+		
+		Matcher matcher=Pattern.compile(regex).matcher(seaEle);
+		if(matcher.matches()&&emailID.stream().anyMatch(mail->mail.equals(seaEle))) {
+			System.out.println(seaEle+ " is found");
+		}
+		else {
+			System.out.println(seaEle+ " is not found");
+		}
+	}
+}
